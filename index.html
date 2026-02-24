@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Aniversário 🎂</title>
+
+<style>
+body{
+    background: linear-gradient(135deg,#000,#0f2027);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+/* cartão */
+.card{
+    background:#111;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    width:90%;
+    max-width:500px;
+    box-shadow:0 0 20px rgba(0,255,200,0.4);
+    animation: aparecer 1.5s ease;
+}
+
+h1{
+    color:aquamarine;
+}
+
+p{
+    color:#cceeee;
+}
+
+/* botão */
+button{
+    background:aquamarine;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#00ffaa;
+    transform:scale(1.05);
+}
+
+/* mensagem escondida */
+#mensagem{
+    margin-top:20px;
+    display:none;
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+/* galeria de fotos */
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.foto-box{
+    width:140px;
+}
+
+.foto{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 0 12px rgba(0,255,200,0.4);
+    transition:0.4s;
+}
+
+.foto:hover{
+    transform:scale(1.05);
+}
+
+.legenda{
+    font-size:13px;
+    color:#cceeee;
+    margin-top:6px;
+}
+.foto{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 0 12px rgba(0,255,200,0.4);
+    transition:0.4s;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🎉 Olá Isabela 😜</h1>
+
+<p>
+Hoje é um dia especial.  
+Essa página foi feita no dia 18/02/2026 enquanto eu estudo JavaScript,
+mas também para te desejar um feliz aniversário.
+</p>
+
+<button onclick="mostrarMensagem()">Clique aqui 💌</button>
+
+<div id="mensagem">
+<p>
+Quero te desejar todo o sucesso do mundo.  
+Mesmo que a vida siga caminhos diferentes,
+espero que você conquiste tudo que merece.
+</p>
+
+<p>
+A vida é curta — viva intensamente,
+sorria muito e aproveite cada momento.
+</p>
+
+<h3>✨ Ass: Perdona ✨</h3>
+<div class="galeria">
+
+    <div class="foto-box">
+        <img src="imagens/foto1 (1).jpeg" class="foto"
+        onclick="mensagemFoto('Esse dia foi especial ❤️')">
+        <p class="legenda">Um momento especial 😊</p>
+    </div>
+
+    <div class="foto-box">
+        <img src="imagens/foto1 (2).jpeg" class="foto"
+        onclick="mensagemFoto('Lembranças boas nunca acabam ✨')">
+        <p class="legenda">Boas lembranças ✨</p>
+    </div>
+
+    <div class="foto-box">
+        <img src="imagens/foto1 (3).jpeg" class="foto"
+        onclick="mensagemFoto('Seu sorriso sempre marcou 💫')">
+        <p class="legenda">Linda e nariguda como sempre 💫</p>
+    </div>
+
+</div>
+</div>
+
+<script>
+
+var nome = prompt("Qual é o seu nome?");
+alert("Olá " + nome + " 😊");
+
+function mostrarMensagem(){
+    var msg = document.getElementById("mensagem");
+    msg.style.display = "block";
+}
+function mensagemFoto(texto){
+    alert(texto);
+}
+</script>
+
+</body>
+</html>
